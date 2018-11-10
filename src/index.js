@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WebFont from 'webfontloader';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 
 import App from './App';
+
 import quote from './reducers/quote';
+
 import * as serviceWorker from './serviceWorker';
 
 const app = combineReducers({quote});
@@ -16,7 +17,9 @@ const store = createStore(
     applyMiddleware(thunkMiddleware)
 );
 
-window.store = store;
+if(process.env.NODE_ENV === 'development') {
+    window.store = store;
+}
 
 ReactDOM.render(
     <Provider store={ store }>
