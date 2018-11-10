@@ -1,32 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i");
+body {
+  margin: 0;
+  padding: 0; }
+
 .App {
-  text-align: center;
-}
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+  color: #454;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Quotebox {
+  background-color: #454;
+  color: #ddd;
+  width: 75%;
+  min-height: 50%;
+  padding: 20px 0 150px;
+  position: relative;
+  transition: all ease 0.25s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: center; }
+  .Quotebox .Quote {
+    width: 80%;
+    font-size: 4em;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .Quotebox .Quote #text, .Quotebox .Quote #author {
+      width: 100%; }
+    .Quotebox .Quote #author {
+      margin-top: 1em;
+      text-align: right;
+      font-size: .75em;
+      font-family: 'Playfair Display', Serif;
+      font-weight: 400;
+      font-style: italic; }
+  .Quotebox .Controls {
+    margin-top: 50px;
+    position: absolute;
+    bottom: 50px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .Quotebox .Controls button, .Quotebox .Controls .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: #fff;
+      border: none;
+      font-size: 2em;
+      width: 2.5em;
+      height: 2.5em;
+      border-radius: 50%;
+      box-shadow: 5px 5px 6px rgba(50, 50, 50, 0.5);
+      transition: all ease 0.25s; }
+      .Quotebox .Controls button i, .Quotebox .Controls .button i {
+        transition: all ease 0.25s; }
+      .Quotebox .Controls button:hover, .Quotebox .Controls .button:hover {
+        box-shadow: 2px 2px 7px 8px rgba(50, 50, 50, 0.3);
+        cursor: pointer; }
+        .Quotebox .Controls button:hover i, .Quotebox .Controls .button:hover i {
+          transform: rotate(-30deg); }
+      .Quotebox .Controls button:focus, .Quotebox .Controls .button:focus {
+        outline: none; }
 
-.App-link {
-  color: #61dafb;
-}
+.Quotebox.color-0 {
+  background-color: #631d1d;
+  color: #d7f4f4; }
+  .Quotebox.color-0 .Controls button, .Quotebox.color-0 .Controls .button {
+    color: #9e372e; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.Quotebox.color-1 {
+  background-color: #63471d;
+  color: #d7e3f4; }
+  .Quotebox.color-1 .Controls button, .Quotebox.color-1 .Controls .button {
+    color: #9e7b2e; }
+
+.Quotebox.color-2 {
+  background-color: #55631d;
+  color: #ddd7f4; }
+  .Quotebox.color-2 .Controls button, .Quotebox.color-2 .Controls .button {
+    color: #7e9e2e; }
+
+.Quotebox.color-3 {
+  background-color: #2b631d;
+  color: #eed7f4; }
+  .Quotebox.color-3 .Controls button, .Quotebox.color-3 .Controls .button {
+    color: #3b9e2e; }
+
+.Quotebox.color-4 {
+  background-color: #1d6339;
+  color: #f4d7e8; }
+  .Quotebox.color-4 .Controls button, .Quotebox.color-4 .Controls .button {
+    color: #2e9e64; }
+
+.Quotebox.color-5 {
+  background-color: #1d6363;
+  color: #f4d7d7; }
+  .Quotebox.color-5 .Controls button, .Quotebox.color-5 .Controls .button {
+    color: #2e959e; }
+
+.Quotebox.color-6 {
+  background-color: #1d3963;
+  color: #f4e8d7; }
+  .Quotebox.color-6 .Controls button, .Quotebox.color-6 .Controls .button {
+    color: #2e519e; }
+
+.Quotebox.color-7 {
+  background-color: #2b1d63;
+  color: #eef4d7; }
+  .Quotebox.color-7 .Controls button, .Quotebox.color-7 .Controls .button {
+    color: #4e2e9e; }
+
+.Quotebox.color-8 {
+  background-color: #551d63;
+  color: #ddf4d7; }
+  .Quotebox.color-8 .Controls button, .Quotebox.color-8 .Controls .button {
+    color: #912e9e; }
+
+.Quotebox.color-9 {
+  background-color: #631d47;
+  color: #d7f4e3; }
+  .Quotebox.color-9 .Controls button, .Quotebox.color-9 .Controls .button {
+    color: #9e2e68; }
+
+.Quotebox.color-10 {
+  background-color: #631d1d;
+  color: #d7f4f4; }
+  .Quotebox.color-10 .Controls button, .Quotebox.color-10 .Controls .button {
+    color: #9e372e; }
